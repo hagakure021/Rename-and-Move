@@ -3,10 +3,10 @@ from pathlib import Path
 import shutil
 
 # folder path
-dir_path = os.path.abspath (r'C:\Users\wjones25\Desktop\TEST')
+dir_path = os.path.abspath (r'C:\Users\Admin\Documents\GitHub\Rename-and-Move\Repo\TEST')
 count = 0
 directory = "FOLDER_{}"
-test2_path: str = r'C:\Users\wjones25\Desktop\test2'
+test2_path: str = r'C:\Users\Admin\Documents\GitHub\Rename-and-Move\Repo\test2'
 
  
 def check_dir():
