@@ -8,7 +8,8 @@ count = 0
 directory = "FOLDER_{}"
 test2_path: str = r'C:\Users\Admin\Documents\GitHub\Rename-and-Move\Repo\test2'
 
-
+#This starts the directory check to see if there are files in the folder.
+# If they are they move to the rename section. If not return no files.  This works.
 def check_dir():
     count = 0
     # checking the directory for files
@@ -25,7 +26,7 @@ def check_dir():
         rname()
 
 
-
+#This is set to rename the files in the specefic naming convention required. This works.
 def rname():
     os.chdir(dir_path)
     print("Renaming Files.")
@@ -40,6 +41,7 @@ def rname():
     folcreate()
    # move_file()
 
+#This is to check if a directory is created if so then create another
 def folcreate():
     print("There are still files in this directory.")
     isExist = os.path.exists(dir_path + directory.format(count + 1))
@@ -49,8 +51,8 @@ def folcreate():
     print("Moving to move file")
     move_file()
 
-    # Loops back to begging until all files are removed from the dir_path
 
+#This is to move the files 12 at a time (preferably to the directory that was created in folcreate.
 def move_file():
     file_names = os.listdir(dir_path)
     print(file_names)
@@ -60,7 +62,7 @@ def move_file():
         shutil.move(os.path.join(dir_path, file_names), test2_path)
     print('Finishing move restarting check')
     check_dir()
-
+ #Restarts check dir
 
 
 
